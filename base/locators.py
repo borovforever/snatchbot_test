@@ -11,6 +11,7 @@ class MainPageLocators():
     POPUP_IFRAME = "sntch_popup"
     TESTCHAT_INPUT_XPATH = (By.XPATH, "//input[@data-test='input-chat']")
     TESTCHAT_SEND_XPATH = (By.XPATH, "//button[@data-test='btn-send-message']")
+    BOT_MESSAGE = (By.XPATH, "//div[@data-test='message-text']")
     USER_MESSAGE = (By.XPATH, "//span[contains(text(),'Yes')]")
 
 class BotLocators():
@@ -21,20 +22,18 @@ class BotLocators():
     BUTTON_ACTIVITY = (By.XPATH, "//button[@disabled='true']")
     BOT_NAME = (By.XPATH, "//textarea[@data-test='bot-name']")
     BOT_DESCRIPTION = (By.XPATH, "//textarea[@data-test='bot-description']")
-    upload_image_xpath = "//input[@data-test='input-file']"
-    create_btn_xpath = "//button[@data-test='btn-create-bot']"
-    cancel_bot_btn_xpath = "////span[@translate='buttons.cancel']"
-    image_path = "C:/python/Snatchbot_Test/pic.PNG"
-    bot_name = "test_bot"
-    bot_descr = "Test_Bot_Description"
-    template_card_xpath = "//div[@class='view directory-view']"
-    use_template_xpath = "//button[@class='mat-stroked-button mat-button-base']"
-    test_chat_iframe = "sntch_iframe"
-    test_chat_input_xpath = "//input[@data-test='input-chat']"
-    test_chat_send_xpath = "//button[@data-test='btn-send-message']"
-    persistent_menu_btn_xpath = "//button[@class='persistent-menu-btn mat-menu-trigger mat-icon-button mat-button-base']"
-    persistent_xpath = "//button[@role='menuitem']"
-    edit_bot_xpath = "//button[@data-test='bot-action-edit']"
+    UPLOAD_IMAGE = (By.XPATH, "//input[@data-test='input-file']")
+    CREATE_BOT = (By.XPATH, "//button[@data-test='btn-create-bot']")
+    OK_BTN = (By.XPATH, "//button[@data-test='btn-alert-modal2']")
+    ADD_INTERACTION_BTN = (By.XPATH, "//button[@data-test='btn-add-interaction']")
+    EMPTY_BOT = (By.XPATH, "//div[@class='conversation__empty-plugin--is-empty']")
+    CANCEL_BOT_BTN = (By.XPATH, "////span[@translate='buttons.cancel']")
+    TEMPLATE_CARD = (By.XPATH, "//div[@class='view directory-view']")
+    USE_TEMPLATE = (By.XPATH, "//button[@class='mat-stroked-button mat-button-base']")
+    TEST_CHAT_IFRAME = "sntch_iframe"
+    PERSISTENT_MENU_BTN = (By.XPATH, "//button[@class='persistent-menu-btn mat-menu-trigger mat-icon-button mat-button-base']")
+    PERSISTENT_XPATH = (By.XPATH, "//button[@role='menuitem']")
+    EDIT_BOT = (By.XPATH, "//button[@data-test='bot-action-edit']")
     add_new_interaction_xpath = "//span[contains(text(),'Add new interaction / plugin')]"
     interaction_name_xpath = "//input[@data-test='input-iteraction-name']"
     create_interaction_btn_xpath = "//button[@data-test='btn-create-iteraction']"

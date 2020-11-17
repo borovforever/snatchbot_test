@@ -7,6 +7,7 @@ LOGIN_PAGE = "https://cpstaging.snatch.cloud/login"
 DASHBOARD = "https://cpstaging.snatch.cloud/dashboard"
 REGISTER_PAGE = "https://cpstaging.snatch.cloud/register"
 MAIN_PAGE = "https://staging.snatch.cloud"
+MY_BOTS = "https://cpstaging.snatch.cloud/bots"
 PLUGINS = "https://cpstaging.snatch.cloud/plugins"
 ADMIN_PANEL_STAGING = "https://adminstaging.snatch.cloud/login"
 EMBED = "https://supersnatchbot.ucoz.net/"
@@ -34,6 +35,7 @@ USER_CONNECTIONS = "ioleynik+connections@zuzex.com"
 PLUGIN_DELETE = "ioleynik+deleteplugin@zuzex.com"
 
 TEST_PIC = os.path.join(BSD, 'pic.PNG')
+IMAGE_PATH = "C:/python/Snatchbot_Test/pic.PNG"
 
 
 USER_PLUGIN_APPROVE_LOGIN = "ioleynik+pluginapprove@zuzex.com"
