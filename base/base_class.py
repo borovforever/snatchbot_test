@@ -26,7 +26,6 @@ class BaseClass():
         self.find_element3(MainPageLocators.PASS_XPATH).send_keys(settings.USER_PASSWORD)
         self.find_element(MainPageLocators.SIGN_IN_XPATH).click()
 
-
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
@@ -67,6 +66,13 @@ class BaseClass():
     def find_element4(self, locator):
         try:
             return self.browser.find_element(locator)
+        except:
+            self.allure_report()
+            return False
+
+    def find_element5(self, locator):
+        try:
+            return self.browser.find_elements_by_xpath(locator)
         except:
             self.allure_report()
             return False

@@ -56,3 +56,41 @@ class BotLocators():
     change_pic_xpath = "//input[@type='file']"
     widget_open_xpath = "//div[@id='sntch_button']"
     widget_close_xpath = "//div[@id='sntch_close']"
+
+class UserLocators():
+    FIRSTNAME = (By.XPATH, "//*[@data-test='firstname']")
+    LAST_NAME = (By.XPATH, "//*[@data-test='lastname']")
+    EMAIL = (By.XPATH, "//input[@data-test='email']")
+    PASSWORD = (By.XPATH, "//input[@data-test='password']")
+    SIGN_UP_BTN = (By.XPATH, "//button[@data-test='btn-submit']")
+    GREAT_MESSAGE = (By.XPATH, "//h3[@ng-reflect-translate]")
+    MAIL_FOR_SPAM = (By.XPATH, "//input[@name='spammail']")
+    CHECK_BTN = (By.XPATH, "//input[@id='button']")
+    EMAIL_VERIFY = (By.XPATH, "//a[contains(text(),'https://cpstaging.snatch.cloud/auth/check_email?to')]")
+    ACCOUNT_VERIFIED_MESSAGE = (By.XPATH, "//p")
+    OK_BTN = (By.XPATH, "//button[@data-test='btn-alert-modal2']")
+    LOG_IN_TITLE = (By.XPATH, "//h2")
+    DASHBOARD_TITLE = (By.XPATH, "//div[@class='dashboard__title']")
+    SIGN_IN_XPATH = (By.XPATH, "//button[@data-test='sign_in_btn']")
+    EMAIL_LOGIN = (By.XPATH, "//input[@data-test='login_email_input']")
+    PASS_LOGIN = (By.XPATH, "//input[@data-test='login_password_input']")
+    PROFILE = (By.XPATH, "//a[@data-test='profile_router_link']")
+    DELETE_ACCOUNT = (By.XPATH, "//button[@data-test='delete_account_btn']")
+    USER_REGISTERED_MESSAGE = (By.XPATH, "//p[@style]")
+    cancel_btn_xpath = "//button[@data-test='cancel-alert']"
+    CONFIRM_DEL = (By.XPATH, "//button[@data-test='confirm-alert']")
+    FIRST_EMAIL = "//a[contains(text(),'Confirm your email address ')]"
+    check_email_btn_xpath = "//input[@id='button']"
+    logout_xpath = "//mat-icon[@ng-reflect-message='Logout']"
+
+    login_btn_link = "Вход"
+    login_fb_xpath = "//button[@class='btn-facebook mat-stroked-button mat-button-base']"
+    fb_email_xpath = "//input[@name='email']"
+    fb_pass_xpath = "//input[@name='pass']"
+    login_in_fb_xpath = "//button[@name='login']"
+    as_continiue_fb_xpath = "//span[contains(text(),'Продолжить как Jake Stark')]"
+    login_google_xpath = "//button//span[contains(text(),'Login with Google')]"
+    name_google_xpath = "//input[@name='identifier']"
+    next_login_google_xpath = "//div[@id='identifierNext']"
+    google_pass_xpath = "//input[@name='password']"
+    google_next_button_xpath = "//div[@id='passwordNext']"
