@@ -66,7 +66,6 @@ class UserRegister(BaseClass):
             *UserLocators.USER_REGISTERED_MESSAGE), "No 'User with this email is already registered' message."
 
     def login_with_socials(self):
-        self.browser.get(settings.LOGIN_PAGE)
         assert self.is_element_present(*UserLocators.LOGIN_GOOGLE), "No 'login with Google' button"
         assert self.is_element_present(*UserLocators.LOGIN_FB), "No 'login with Facebook' button"
         self.find_element(UserLocators.LOGIN_GOOGLE).click()
@@ -93,5 +92,5 @@ class UserRegister(BaseClass):
         assert self.is_not_element_present(*UserLocators.DASHBOARD_TITLE), "Login with invalid password"
         assert self.is_element_present(
             *UserLocators.INVALID_EMAIL_MODAL), "No modal window 'Invalid email or password' is displayed"
-        message = self.find_element(*UserLocators.INVALID_EMAIL_MESSAGE)
+        message = self.find_element6(UserLocators.INVALID_EMAIL_MESSAGE)
         assert message.text == "Invalid email or password", "No 'invalid email or password message'."
