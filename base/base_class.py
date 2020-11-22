@@ -26,6 +26,11 @@ class BaseClass():
         self.find_element3(MainPageLocators.PASS_XPATH).send_keys(settings.USER_PASSWORD)
         self.find_element(MainPageLocators.SIGN_IN_XPATH).click()
 
+    def login_create_bot(self):
+        self.find_element3(MainPageLocators.EMAIL_INPUT).send_keys(settings.USER_DELETE_BOT)
+        self.find_element3(MainPageLocators.PASS_XPATH).send_keys(settings.USER_PASSWORD)
+        self.find_element(MainPageLocators.SIGN_IN_XPATH).click()
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
@@ -59,23 +64,25 @@ class BaseClass():
             self.allure_report()
             return False
 
-    def find_element3(self, locator, time=10):
-        return WebDriverWait(self.browser, time).until(ec.presence_of_element_located(locator),
-                                                       message=f"Can't find element by locator {locator}")
-
-    def find_element4(self, locator):
+    def find_element3(self, locator, time_wait=10):
         try:
-            return self.browser.find_element(locator)
+            time.sleep(1)
+            return WebDriverWait(self.browser, time_wait).until(ec.presence_of_element_located(locator),
+                                                                message=f"Can't find element by locator {locator}")
         except:
             self.allure_report()
             return False
 
-    def find_element5(self, locator):
+    def find_element6(self, locator):
+        time.sleep(1)
+        return self.browser.find_element(locator[0], locator[1])
+
+    def find_all_elements(self, locator):
         try:
-            return self.browser.find_elements_by_xpath(locator)
+            return self.browser.find_elements(locator[0], locator[1])
         except:
             self.allure_report()
-            return False
+            return  False
 
     def is_disappeared(self, how, what, timeout=4):
         try:

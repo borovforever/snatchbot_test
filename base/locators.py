@@ -14,8 +14,10 @@ class MainPageLocators():
     BOT_MESSAGE = (By.XPATH, "//div[@data-test='message-text']")
     USER_MESSAGE = (By.XPATH, "//span[contains(text(),'Yes')]")
 
+
 class BotLocators():
     MY_BOTS_SECTION = (By.XPATH, "//a[@data-test='route-bots']")
+    DASHBOARD = (By.XPATH, "//a[@data-test='route-dashboard']")
     BOT_MENU = (By.XPATH, ".//*[@data-test='bot-action-menu']")
     CREATE_BOT_BTN = (By.XPATH, "//button[@data-test='btn-create-bot']")
     BLANK_BOT_BTN = (By.XPATH, "//*[@data-test='templates-item']")
@@ -27,7 +29,15 @@ class BotLocators():
     OK_BTN = (By.XPATH, "//button[@data-test='btn-alert-modal2']")
     ADD_INTERACTION_BTN = (By.XPATH, "//button[@data-test='btn-add-interaction']")
     EMPTY_BOT = (By.XPATH, "//div[@class='conversation__empty-plugin--is-empty']")
-    CANCEL_BOT_BTN = (By.XPATH, "////span[@translate='buttons.cancel']")
+    CANCEL_BOT_BTN = (By.XPATH, ".//*[@data-test='bot-delete-cancel']")
+    BOT_CARD = (By.XPATH, "//div[@data-test='bot-title']")
+    COPY_BOT_BTN = (By.XPATH, "//button[@data-test='bot-action-copy']")
+    DELETE_BTN= (By.XPATH, "//button[@data-test='bot-action-delete']")
+    DELETE_INPUT = (By.XPATH, "//input[@data-test='bot-delete-input']")
+    DELETE_CONFIRM_BTN = (By.XPATH, "//button[@data-test='bot-delete-confirm']")
+    NO_BOTS_MESSAGE = (By.XPATH, "//h2[@class='no-bots__title']")
+
+
     TEMPLATE_CARD = (By.XPATH, "//div[@class='view directory-view']")
     USE_TEMPLATE = (By.XPATH, "//button[@class='mat-stroked-button mat-button-base']")
     TEST_CHAT_IFRAME = "sntch_iframe"
@@ -47,7 +57,7 @@ class BotLocators():
     delete_input_xpath = "//input[@data-test='bot-delete-input']"
     delete_confirm_xpath = "//button[@data-test='bot-delete-confirm']"
     cancel_btn_xpath = "//button[@data-test='bot-delete-cancel']"
-    copy_bot_btn_xpath = "//button[@data-test='bot-action-copy']"
+
     bot_configure_xpath = "//button[@data-test='bot-action-configure']"
     configure_name_xpath = "//input[@formcontrolname='name']"
     configure_description_xpath = "//input[@formcontrolname='description']"
@@ -57,19 +67,22 @@ class BotLocators():
     widget_open_xpath = "//div[@id='sntch_button']"
     widget_close_xpath = "//div[@id='sntch_close']"
 
+
 class UserLocators():
     FIRSTNAME = (By.XPATH, "//*[@data-test='firstname']")
     LAST_NAME = (By.XPATH, "//*[@data-test='lastname']")
     EMAIL = (By.XPATH, "//input[@data-test='email']")
     PASSWORD = (By.XPATH, "//input[@data-test='password']")
     SIGN_UP_BTN = (By.XPATH, "//button[@data-test='btn-submit']")
-    GREAT_MESSAGE = (By.XPATH, "//h3[@ng-reflect-translate]")
+    GREAT_MESSAGE = (By.XPATH, "//div[@class='check_email_msg']")
     MAIL_FOR_SPAM = (By.XPATH, "//input[@name='spammail']")
     CHECK_BTN = (By.XPATH, "//input[@id='button']")
     EMAIL_VERIFY = (By.XPATH, "//a[contains(text(),'https://cpstaging.snatch.cloud/auth/check_email?to')]")
     ACCOUNT_VERIFIED_MESSAGE = (By.XPATH, "//p")
     OK_BTN = (By.XPATH, "//button[@data-test='btn-alert-modal2']")
     LOG_IN_TITLE = (By.XPATH, "//h2")
+    INVALID_EMAIL_MODAL = (By.XPATH, "//div[@data-test='alert-modal2']")
+    INVALID_EMAIL_MESSAGE = (By.XPATH, "//p[@style='word-break: break-word']")
     DASHBOARD_TITLE = (By.XPATH, "//div[@class='dashboard__title']")
     SIGN_IN_XPATH = (By.XPATH, "//button[@data-test='sign_in_btn']")
     EMAIL_LOGIN = (By.XPATH, "//input[@data-test='login_email_input']")
@@ -77,20 +90,20 @@ class UserLocators():
     PROFILE = (By.XPATH, "//a[@data-test='profile_router_link']")
     DELETE_ACCOUNT = (By.XPATH, "//button[@data-test='delete_account_btn']")
     USER_REGISTERED_MESSAGE = (By.XPATH, "//p[@style]")
-    cancel_btn_xpath = "//button[@data-test='cancel-alert']"
     CONFIRM_DEL = (By.XPATH, "//button[@data-test='confirm-alert']")
-    FIRST_EMAIL = "//a[contains(text(),'Confirm your email address ')]"
-    check_email_btn_xpath = "//input[@id='button']"
-    logout_xpath = "//mat-icon[@ng-reflect-message='Logout']"
+    FIRST_EMAIL = (By.XPATH, "//a[contains(text(),'Confirm your email address ')]")
+    LOGIN_FB = (By.XPATH, "//button[@class='btn-facebook mat-stroked-button mat-button-base']")
+    LOGIN_GOOGLE = (By.XPATH, "//button//span[contains(text(),'Login with Google')]")
+    NAME_GOOGLE = (By.XPATH, "//input[@name='identifier']")
+    NEXT_LOGIN_GOOGLE = (By.XPATH, "//div[@id='identifierNext']")
+    GOOGLE_PASS = (By.XPATH, "//input[@name='password']")
+    NEXT_PASS_GOOGLE = (By.XPATH, "//div[@id='passwordNext']")
+    LOGOUT = (By.XPATH, "//mat-icon[@ng-reflect-message='Logout']")
+    FB_EMAIL = (By.XPATH, "//input[@name='email']")
+    FB_PASS = (By.XPATH, "//input[@name='pass']")
+    LOGIN_IN_FB = (By.XPATH, "//button[@name='login']")
+    AS_CONTINUE_FB = (By.XPATH, "//span[contains(text(),'Продолжить как Jake Stark')]")
 
-    login_btn_link = "Вход"
-    login_fb_xpath = "//button[@class='btn-facebook mat-stroked-button mat-button-base']"
-    fb_email_xpath = "//input[@name='email']"
-    fb_pass_xpath = "//input[@name='pass']"
-    login_in_fb_xpath = "//button[@name='login']"
-    as_continiue_fb_xpath = "//span[contains(text(),'Продолжить как Jake Stark')]"
-    login_google_xpath = "//button//span[contains(text(),'Login with Google')]"
-    name_google_xpath = "//input[@name='identifier']"
-    next_login_google_xpath = "//div[@id='identifierNext']"
-    google_pass_xpath = "//input[@name='password']"
-    google_next_button_xpath = "//div[@id='passwordNext']"
+
+
+

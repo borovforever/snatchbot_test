@@ -12,3 +12,5 @@ def test_register_login(browser):
     page.registration()
     page.already_registered()
     page.login_delete_account()
+    page.login_with_socials()
+    page.login_with_not_valid_password()
